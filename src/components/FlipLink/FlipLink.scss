@@ -1,0 +1,44 @@
+.flip-container {
+  position: relative;
+  padding: 0.875rem;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.flip-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1;
+  text-transform: uppercase;
+
+  * span {
+    display: inline-block;
+    white-space: pre;
+  }
+}
+
+.flip-first {
+  position: relative;
+}
+
+.flip-second {
+  position: absolute;
+  inset: 0;
+}
+
+.nav-link-wrapper {
+  position: relative;
+}
+
+.cover-absolute {
+  background-color: #1e76b3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

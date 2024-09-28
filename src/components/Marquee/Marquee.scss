@@ -1,0 +1,23 @@
+.marquee {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.horizontal-marquee {
+  display: flex;
+  gap: 2rem;
+  background-color: #212121;
+  transform: rotate(10deg);
+}
+
+.marquee-image {
+  width: auto;
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+
+  .text {
+    color: #fff;
+    margin: 0;
+  }
+}

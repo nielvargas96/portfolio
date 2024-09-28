@@ -1,0 +1,144 @@
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --fs-sm: clamp(0.65rem, 0.62vi + 0.53rem, 0.7rem);
+  --fs-base: clamp(0.81rem, 0.77vi + 0.66rem, 0.88rem);
+  --fs-md: clamp(1.02rem, 0.96vi + 0.82rem, 1.09rem);
+  --fs-lg: clamp(1.27rem, 1.2vi + 1.03rem, 1.37rem);
+  --fs-xl: clamp(1.59rem, 1.5vi + 1.29rem, 1.71rem);
+  --fs-xxl: clamp(1.98rem, 1.88vi + 1.61rem, 2.14rem);
+  --fs-xxxl: clamp(2.48rem, 2.35vi + 2.01rem, 2.67rem);
+}
+
+body {
+  // font-family: 'Rubik', 'Myriad Pro', 'Arial', sans-serif;
+  font-family: "Khula", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.75;
+  font-size: var(--fs-base);
+}
+
+h1,
+.heading-1 {
+  margin-top: calc(var(--gap) * 2);
+  font-size: var(--fs-xxxl);
+}
+
+h2,
+.heading-2 {
+  margin-top: calc(var(--gap) * 1.75);
+  font-size: var(--fs-xxl);
+}
+
+h3,
+.heading-3 {
+  margin-top: calc(var(--gap) * 1.5);
+  font-size: var(--fs-xl);
+}
+
+h4,
+.heading-4 {
+  margin-top: calc(var(--gap) * 1.25);
+  font-size: var(--fs-lg);
+}
+
+h5,
+.heading-5 {
+  margin-top: calc(var(--gap) * 1);
+  font-size: var(--fs-md);
+}
+
+h6,
+.heading-6 {
+  margin-top: calc(var(--gap) * 0.75);
+  font-size: var(--fs-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Khula", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+small,
+.small {
+  color: hsl(0, 0%, 65%);
+  font-size: var(--fs-sm);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p,
+table,
+ul {
+  margin: 1rem 0;
+
+  a {
+    color: var(--pri-color);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Screen 450px ++ Tablet ~ Large Tablet */
+@media only screen and (min-width: 450px) {
+  :root {
+    --fs-sm: clamp(0.7rem, -0.01vi + 0.7rem, 0.7rem);
+    --fs-base: clamp(0.88rem, 0.09vi + 0.85rem, 0.91rem);
+    --fs-md: clamp(1.09rem, 0.24vi + 1.03rem, 1.18rem);
+    --fs-lg: clamp(1.37rem, 0.46vi + 1.24rem, 1.53rem);
+    --fs-xl: clamp(1.71rem, 0.79vi + 1.49rem, 1.99rem);
+    --fs-xxl: clamp(2.14rem, 1.26vi + 1.78rem, 2.59rem);
+    --fs-xxxl: clamp(2.67rem, 1.94vi + 2.13rem, 3.36rem);
+  }
+}
+
+/* Screen 980px ++ Large Tablet, Small Laptops ~ Big Laptops */
+@media only screen and (min-width: 1024px) {
+  :root {
+    --fs-sm: clamp(0.72rem, 0.06vi + 0.68rem, 0.74rem);
+    --fs-base: clamp(0.94rem, 0.19vi + 0.82rem, 1rem);
+    --fs-md: clamp(1.22rem, 0.39vi + 0.97rem, 1.35rem);
+    --fs-lg: clamp(1.58rem, 0.71vi + 1.13rem, 1.82rem);
+    --fs-xl: clamp(2.06rem, 1.2vi + 1.29rem, 2.46rem);
+    --fs-xxl: clamp(2.68rem, 1.92vi + 1.45rem, 3.32rem);
+    --fs-xxxl: clamp(3.48rem, 2.99vi + 1.56rem, 4.48rem);
+  }
+}
+
+/* Screen 1560px ++ Big Monitors */
+@media only screen and (min-width: 1560px) {
+  :root {
+    --fs-sm: clamp(0.74rem, 0.27vi + 0.48rem, 0.78rem);
+    --fs-base: clamp(1rem, 0.42vi + 0.59rem, 1.06rem);
+    --fs-md: clamp(1.35rem, 0.63vi + 0.73rem, 1.45rem);
+    --fs-lg: clamp(1.82rem, 0.95vi + 0.89rem, 1.97rem);
+    --fs-xl: clamp(2.46rem, 1.42vi + 1.08rem, 2.67rem);
+    --fs-xxl: clamp(3.32rem, 2.09vi + 1.28rem, 3.63rem);
+    --fs-xxxl: clamp(4.48rem, 3.06vi + 1.5rem, 4.94rem);
+  }
+}
