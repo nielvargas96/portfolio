@@ -1,6 +1,6 @@
 import { motion, transform } from "framer-motion";
 
-import "./marquee.scss";
+import "./Marquee.scss";
 
 export default function Marquee(props) {
   const marqueeVariants = {
