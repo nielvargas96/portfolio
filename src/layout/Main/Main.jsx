@@ -233,10 +233,10 @@ function Main() {
 
       <section id='projects' className='projects'>
         <div className='projects-wrapper'>
-          <h2>Projects<span className='highlight'>.</span></h2>
+          <h2>Work<span className='highlight'>.</span></h2>
 
           <div className='project-list'>
-            <StickyCursorWrapper text={'view'} img="/p1.png">
+            <StickyCursorWrapper text={'visit live website'} img="/p1.png">
               <div className='project-item'>
                 <motion.div
                   initial={{
@@ -281,7 +281,7 @@ function Main() {
               </div>
             </StickyCursorWrapper>
 
-            <StickyCursorWrapper text={'view'} img="/p3.png">
+            <StickyCursorWrapper text={'visit live website'} img="/p3.png">
               <div className='project-item'>
                 <motion.div
                   initial={{
@@ -326,7 +326,7 @@ function Main() {
               </div>
             </StickyCursorWrapper>
 
-            <StickyCursorWrapper text={'view'} img="/p5.png">
+            <StickyCursorWrapper text={'visit live website'} img="/p5.png">
               <div className='project-item'>
                 <motion.div
                   initial={{
@@ -349,7 +349,7 @@ function Main() {
               </div>
             </StickyCursorWrapper>
 
-            <StickyCursorWrapper text={'view'} img="/p6.png">
+            <StickyCursorWrapper text={'visit live website'} img="/p6.png">
               <div className='project-item'>
                 <motion.div
                   initial={{
