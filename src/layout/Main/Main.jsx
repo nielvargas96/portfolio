@@ -304,7 +304,7 @@ function Main() {
               </div>
             </StickyCursorWrapper>
 
-            <StickyCursorWrapper img="/p4.png">
+            <StickyCursorWrapper text={'visit live website'} img="/p4.png">
               <div className='project-item'>
                 <motion.div
                   initial={{
@@ -316,6 +316,7 @@ function Main() {
                     opacity: 0.8
                   }}
                   className='item'>
+              <a target='_blank' href="https://sanmiguel.com.ph/smcannualreport2023/" className='absolute-link' title='SMC - AR 2023'></a>
                   <h3>
                     <span>04.</span>
                     SMC - AR 2023
