@@ -259,27 +259,7 @@ function Main() {
               </div>
             </StickyCursorWrapper>
 
-            <StickyCursorWrapper img="/p2.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <h3>
-                    <span>02.</span>
-                    SMC - KOL
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
+            
 
             <StickyCursorWrapper text={'visit live website'} img="/p3.png">
               <div className='project-item'>
@@ -295,8 +275,78 @@ function Main() {
                   className='item'>
                   <a target='_blank' href="https://betterrivers.com.ph/" className='absolute-link' title='betterrivers'></a>
                   <h3>
-                    <span>03.</span>
+                    <span>02.</span>
                     SMC - BetterRivers
+                  </h3>
+
+                  <h4>Web Development / Design</h4>
+                </motion.div>
+              </div>
+            </StickyCursorWrapper>
+
+            
+            <StickyCursorWrapper text={'visit live website'} img="/p10.png">
+              <div className='project-item'>
+                <motion.div
+                  initial={{
+                    padding: 0
+                  }}
+                  whileHover={{
+                    padding: '0 0.5rem',
+                    scale: 0.97,
+                    opacity: 0.8
+                  }}
+                  className='item'>
+                  <a target='_blank' href="https://sanmiguel.com.ph/corporate/kaunlaran" className='absolute-link' title='smc kaunlaran pages'></a>
+                  <h3>
+                    <span>03.</span>
+                    SMC Main (Kaunlaran Pages)
+                  </h3>
+
+                  <h4>Web Development / Design</h4>
+                </motion.div>
+              </div>
+            </StickyCursorWrapper>
+
+            <StickyCursorWrapper text={'visit live website'} img="/p9.png">
+              <div className='project-item'>
+                <motion.div
+                  initial={{
+                    padding: 0
+                  }}
+                  whileHover={{
+                    padding: '0 0.5rem',
+                    scale: 0.97,
+                    opacity: 0.8
+                  }}
+                  className='item'>
+                  <a target='_blank' href="https://sanmiguel.com.ph/corporate/kaunlaran" className='absolute-link' title='worldwewant'></a>
+                  <h3>
+                    <span>04.</span>
+                    World We Want (Page Transitions & Animations)
+                  </h3>
+
+                  <h4>Web Development / Design</h4>
+                </motion.div>
+              </div>
+            </StickyCursorWrapper>
+
+            <StickyCursorWrapper text={'visit live website'} img="/p8.png">
+              <div className='project-item'>
+                <motion.div
+                  initial={{
+                    padding: 0
+                  }}
+                  whileHover={{
+                    padding: '0 0.5rem',
+                    scale: 0.97,
+                    opacity: 0.8
+                  }}
+                  className='item'>
+                  <a target='_blank' href="https://newnaia.com.ph/" className='absolute-link' title='newnaia'></a>
+                  <h3>
+                    <span>05.</span>
+                    New NAIA (API Integration)
                   </h3>
 
                   <h4>Web Development / Design</h4>
@@ -318,8 +368,30 @@ function Main() {
                   className='item'>
               <a target='_blank' href="https://sanmiguel.com.ph/smcannualreport2023/" className='absolute-link' title='SMC - AR 2023'></a>
                   <h3>
-                    <span>04.</span>
+                    <span>06.</span>
                     SMC - AR 2023
+                  </h3>
+
+                  <h4>Web Development / Design</h4>
+                </motion.div>
+              </div>
+            </StickyCursorWrapper>
+
+            <StickyCursorWrapper img="/p2.png">
+              <div className='project-item'>
+                <motion.div
+                  initial={{
+                    padding: 0
+                  }}
+                  whileHover={{
+                    padding: '0 0.5rem',
+                    scale: 0.97,
+                    opacity: 0.8
+                  }}
+                  className='item'>
+                  <h3>
+                    <span>07.</span>
+                    SMC - KOL
                   </h3>
 
                   <h4>Web Development / Design</h4>
@@ -341,7 +413,7 @@ function Main() {
                   className='item'>
                   <a target='_blank' href="https://shop.solaireresort.com/" className='absolute-link' title='shop.solaireresort'></a>
                   <h3>
-                    <span>05.</span>
+                    <span>08.</span>
                     Solaire - Ecommerce
                   </h3>
 
@@ -364,7 +436,7 @@ function Main() {
                   className='item'>
                   <a target='_blank' href="https://sec.solaireresort.com/" className='absolute-link' title='sec.solaireresort'></a>
                   <h3>
-                    <span>06.</span>
+                    <span>09.</span>
                     Solaire - Entertainment City
                   </h3>
 
@@ -394,7 +466,7 @@ function Main() {
           </div>
           <div className='reserved'>
             <div>
-              &copy; Niel Tyron Vargas 2024. All rights reserved <br />
+              &copy; Niel Tyron Vargas 2025. All rights reserved <br />
               This site showcase my personal projects and professional work. <br />
               Content may not be used without permission.
             </div>
