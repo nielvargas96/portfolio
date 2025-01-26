@@ -320,7 +320,7 @@ function Main() {
                     opacity: 0.8
                   }}
                   className='item'>
-                  <a target='_blank' href="https://sanmiguel.com.ph/corporate/kaunlaran" className='absolute-link' title='worldwewant'></a>
+                  <a target='_blank' href="https://worldwewant.ph/" className='absolute-link' title='worldwewant'></a>
                   <h3>
                     <span>04.</span>
                     World We Want (Page Transitions & Animations)
