@@ -33,17 +33,20 @@ function StickyCursor({ stickyElement, children }) {
 					&&
 					<motion.img
 						initial={{
-							opacity: 0
+							opacity: 0,
+							y: shape === 'circle' ? 200 : 0
 						}}
 						animate={{
 							opacity: 1,
+							y:0,
 							transition: {
-								duration: .275,
+								duration: shape === 'circle' ? 0.5 : 0.275,
 								ease: [0.76, 0, 0.24, 1],
 							}
 						}}
 						exit={{
-							opacity: 1
+							opacity: 0,
+							y: shape === 'circle' ? 200 : 0
 						}}
 						className={`${shape === 'circle' && 'circle'} img-sticky`} src={img} width={250} />}
 

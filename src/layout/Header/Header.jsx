@@ -115,11 +115,11 @@ function Header(props, ref) {
                 exit="exit"
                 className='lets-talk-nav'>
 
-                <h3>Let's have a talk!</h3>
+                <h3>Contact me</h3>
 
                 <div className='socials'>
                   <a href="mailto: nielvargas96@gmail.com" title='Email' target='_blank'><MdOutlineMailOutline size={'2rem'} /> <span>Email</span></a>
-                  <a href="tel:+639167171278”" target='_blank' title='Phone' ><FiPhone size={'2rem'} /> <span>Phone</span></a>
+                  <a href="tel:+639455711314" target='_blank' title='Phone' ><FiPhone size={'2rem'} /> <span>Phone</span></a>
                   <a href="https://www.linkedin.com/in/niel-tyron-vargas-455b5a27b/" target='_blank' title='LinkedIn'><FiLinkedin size={'2rem'} /> <span>LinkedIn</span></a>
                 </div>
               </motion.div>

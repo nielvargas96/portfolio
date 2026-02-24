@@ -40,6 +40,10 @@ section {
     font-size: clamp(1.125rem, 0.9736rem + 0.6731vw, 1.5625rem);
     max-width: 50%;
     margin: 0 auto;
+
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
 
@@ -244,7 +248,7 @@ section {
     margin-left: 1rem;
 
     p {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 
@@ -470,6 +474,14 @@ section {
       margin-bottom: .25rem;
     }
   }
+}
+
+.short-desc {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 1024px) {

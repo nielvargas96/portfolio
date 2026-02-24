@@ -135,6 +135,104 @@ function Main() {
     }
   };
 
+  const projects = [
+    {
+      id: 10,
+      title: "Casino Plus",
+      category: "Mobile App & Web Development",
+      link: "https://casinoplus.ph/",
+      image: "/p11.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 11,
+      title: "SNSoft - Official Website",
+      category: "Web Development & Design",
+      link: "https://www.snsoft.ph/",
+      image: "/p12.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 12,
+      title: "The Blanche Beauty",
+      category: "Shopify Web Development & Design",
+      link: "https://theblanchebeauty.com/",
+      image: "/p13.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 1,
+      title: "SMC - Sustainability",
+      category: "Web Development & Design",
+      link: "https://www.sanmiguel.com.ph/sustainability/",
+      image: "/p1.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 2,
+      title: "SMC - BetterRivers",
+      category: "Web Development & Design",
+      link: "https://betterrivers.com.ph/",
+      image: "/p3.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 3,
+      title: "SMC Main (Kaunlaran Pages)",
+      category: "Web Development & Design",
+      link: "https://sanmiguel.com.ph/corporate/kaunlaran",
+      image: "/p10.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 4,
+      title: "World We Want",
+      category: "Web Development & Design",
+      link: "https://worldwewant.ph/",
+      image: "/p9.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 5,
+      title: "New NAIA",
+      category: "Web Development & Design",
+      link: "https://newnaia.com.ph/",
+      image: "/p8.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 6,
+      title: "SMC - AR 2023",
+      category: "Web Development & Design",
+      link: "https://sanmiguel.com.ph/smcannualreport2023/",
+      image: "/p4.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 7,
+      title: "SMC - K.ONLINE",
+      category: "Web Development & Design",
+      link: null, // no live link in your markup
+      image: "/p2.png"
+    },
+    {
+      id: 8,
+      title: "Solaire - Mini Ecommerce",
+      category: "Web Development & Design",
+      link: "https://shop.solaireresort.com/",
+      image: "/p5.png",
+      tooltip: "visit live website"
+    },
+    {
+      id: 9,
+      title: "Solaire - Entertainment City",
+      category: "Web Development & Design",
+      link: "https://sec.solaireresort.com/",
+      image: "/p6.png",
+      tooltip: "visit live website"
+    }, 
+  ];
+
   return (
     <main>
       <motion.section
@@ -164,10 +262,8 @@ function Main() {
             animate="animate"
             className='content'>
             <ParallaxText>
-              <h1>
-                Transforming ideas into <span className='highlight'>innovative</span> solutions.
-              </h1>
-              <p>A passionate frontend developer, crafting trending and innovative designs.</p>
+            <h1>Pixels in <span class="highlight">Motion</span></h1>
+            <p>Transforming static designs into dynamic, interactive, and responsive websites</p>
             </ParallaxText>
           </motion.div>
         </div>
@@ -193,8 +289,8 @@ function Main() {
             <div className='desc-container'>
               <h2>Hi I’m <span className='highlight'>Niel</span>,</h2>
               <p>
-                I believe in a user centered design approach, ensuring that every project I work on is tailored to  meet the specific needs of its users.
-              </p>
+              Frontend Developer with 6+ years of experience building high-performance, scalable web applications using React and Next.js. I specialize in creating user-centered interfaces and contributing to production-grade systems.
+             </p>
 
               <div className="btn-wrapper">
                 <div className="btn-content">
@@ -231,223 +327,59 @@ function Main() {
         </div>
       </section>
 
-      <section id='projects' className='projects'>
-        <div className='projects-wrapper'>
-          <h2>Work<span className='highlight'>.</span></h2>
+      <section id="projects" className="projects">
+        <div className="projects-wrapper">
+          <h2>
+            Professional Experience
+            <span className="highlight">.</span>
+          </h2>
 
-          <div className='project-list'>
-            <StickyCursorWrapper text={'visit live website'} img="/p1.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://www.sanmiguel.com.ph/sustainability/" className='absolute-link' title='sustainability'></a>
-                  <h3>
-                    <span>01.</span>
-                    SMC - Sustainability
-                  </h3>
+          <p class="short-desc">
+          This section highlights my professional work and industry experience in developing, designing, and supporting high-performing websites and applications. I have delivered digital solutions across gaming, corporate, sustainability, and eCommerce industries—focusing on scalability, performance optimization, and seamless user experience.
+          </p>
 
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
+          <div className="project-list">
+            {projects.map((project, index) => (
+              <StickyCursorWrapper
+                key={project.id}
+                text={project.tooltip}
+                img={project.image}
+              >
+                <div className="project-item">
+                  <motion.div
+                    initial={{ padding: 0 }}
+                    whileHover={{
+                      padding: "0 0.5rem",
+                      scale: 0.97,
+                      opacity: 0.8
+                    }}
+                    className="item"
+                  >
+                    {project.link && (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={project.link}
+                        className="absolute-link"
+                        title={project.title}
+                      />
+                    )}
 
-            
+                    <h3>
+                      <span>
+                        {String(index + 1).padStart(2, "0")}.
+                      </span>
+                      {project.title}
+                    </h3>
 
-            <StickyCursorWrapper text={'visit live website'} img="/p3.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://betterrivers.com.ph/" className='absolute-link' title='betterrivers'></a>
-                  <h3>
-                    <span>02.</span>
-                    SMC - BetterRivers
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            
-            <StickyCursorWrapper text={'visit live website'} img="/p10.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://sanmiguel.com.ph/corporate/kaunlaran" className='absolute-link' title='smc kaunlaran pages'></a>
-                  <h3>
-                    <span>03.</span>
-                    SMC Main (Kaunlaran Pages)
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper text={'visit live website'} img="/p9.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://worldwewant.ph/" className='absolute-link' title='worldwewant'></a>
-                  <h3>
-                    <span>04.</span>
-                    World We Want (Page Transitions & Animations)
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper text={'visit live website'} img="/p8.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://newnaia.com.ph/" className='absolute-link' title='newnaia'></a>
-                  <h3>
-                    <span>05.</span>
-                    New NAIA (API Integration)
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper text={'visit live website'} img="/p4.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-              <a target='_blank' href="https://sanmiguel.com.ph/smcannualreport2023/" className='absolute-link' title='SMC - AR 2023'></a>
-                  <h3>
-                    <span>06.</span>
-                    SMC - AR 2023
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper img="/p2.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <h3>
-                    <span>07.</span>
-                    SMC - KOL
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper text={'visit live website'} img="/p5.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://shop.solaireresort.com/" className='absolute-link' title='shop.solaireresort'></a>
-                  <h3>
-                    <span>08.</span>
-                    Solaire - Ecommerce
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
-            <StickyCursorWrapper text={'visit live website'} img="/p6.png">
-              <div className='project-item'>
-                <motion.div
-                  initial={{
-                    padding: 0
-                  }}
-                  whileHover={{
-                    padding: '0 0.5rem',
-                    scale: 0.97,
-                    opacity: 0.8
-                  }}
-                  className='item'>
-                  <a target='_blank' href="https://sec.solaireresort.com/" className='absolute-link' title='sec.solaireresort'></a>
-                  <h3>
-                    <span>09.</span>
-                    Solaire - Entertainment City
-                  </h3>
-
-                  <h4>Web Development / Design</h4>
-                </motion.div>
-              </div>
-            </StickyCursorWrapper>
-
+                    <h4>{project.category}</h4>
+                  </motion.div>
+                </div>
+              </StickyCursorWrapper>
+            ))}
           </div>
         </div>
-      </section >
+      </section>
 
 
       <section className='contact' ref={contact}>
@@ -456,11 +388,11 @@ function Main() {
 
         <div className='contact-content'>
           <div className='lets-talk'>
-            <h3>Let's have a talk!</h3>
+            <h3>Let's have a chat!</h3>
 
             <div className='socials'>
               <a href="mailto: nielvargas96@gmail.com" title='Email' target='_blank'><MdOutlineMailOutline size={'2rem'} /> <span>Email</span></a>
-              <a href="tel:+639167171278”" target='_blank' title='Phone' ><FiPhone size={'2rem'} /> <span>Phone</span></a>
+              <a href="tel:+639455711314" target='_blank' title='Phone' ><FiPhone size={'2rem'} /> <span>Phone</span></a>
               <a href="https://www.linkedin.com/in/niel-tyron-vargas-455b5a27b/" target='_blank' title='LinkedIn'><FiLinkedin size={'2rem'} /> <span>LinkedIn</span></a>
             </div>
           </div>
