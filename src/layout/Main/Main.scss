@@ -20,6 +20,7 @@ section {
   text-align: center;
   position: relative;
   user-select: none;
+  overflow: hidden;
 
 
   h1 {
@@ -29,7 +30,7 @@ section {
     line-height: 1;
     margin-bottom: 1rem;
 
-    span {
+    .highlight {
       color: #C9D940;
     }
   }
@@ -66,6 +67,105 @@ section {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle, rgba(202, 217, 64, 0.25) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+// Hero floating orbs
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+
+  &--1 {
+    top: 12%;
+    left: 8%;
+    width: clamp(220px, 30vw, 420px);
+    height: clamp(220px, 30vw, 420px);
+    background: rgba(201, 217, 64, 0.16);
+  }
+
+  &--2 {
+    bottom: 8%;
+    right: 6%;
+    width: clamp(180px, 26vw, 380px);
+    height: clamp(180px, 26vw, 380px);
+    background: rgba(125, 124, 214, 0.2);
+  }
+}
+
+// Hero badge
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem 1.1rem 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  color: #c0c0c0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c9d940;
+    animation: badge-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes badge-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 217, 64, 0.55);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px rgba(201, 217, 64, 0);
+  }
+}
+
+// Hero title word reveal
+.hero-title {
+  .word-mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+
+    &:not(:last-child) {
+      margin-right: 0.28em;
+    }
+
+    >span {
+      display: inline-block;
+      will-change: transform;
+    }
+  }
+
+  .highlight {
+    background: linear-gradient(110deg, #c9d940 35%, #f4ff86 50%, #c9d940 65%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: title-shimmer 4.5s linear infinite 2.5s;
+  }
+}
+
+@keyframes title-shimmer {
+  0% {
+    background-position: 120% 0;
+  }
+
+  100% {
+    background-position: -120% 0;
+  }
 }
 
 .bg-lines {
@@ -336,6 +436,7 @@ section {
 .projects {
   height: auto;
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .projects-wrapper {
@@ -346,13 +447,19 @@ section {
 
 .project-list {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 0;
 }
 
 .project-item {
   position: relative;
   padding: 2rem;
   border-bottom: 1px solid #212121;
+  cursor: pointer;
+  outline: none;
+
+  &:focus-visible {
+    background: rgba(201, 217, 64, 0.07);
+  }
 }
 
 .item {
@@ -371,6 +478,9 @@ section {
   }
 
   h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-weight: 400;
     color: #6a6a6a;
   }
@@ -379,6 +489,21 @@ section {
   h4 {
     margin-top: 1rem;
   }
+
+  .item-arrow {
+    font-size: 1.35rem;
+    color: #c9d940;
+    opacity: 0;
+    transform: translate(-8px, 8px);
+    transition: opacity 0.35s cubic-bezier(0.33, 1, 0.68, 1),
+      transform 0.35s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}
+
+.project-item:hover .item-arrow,
+.project-item:focus-visible .item-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .contact {
@@ -486,7 +611,9 @@ section {
 
 @media only screen and (max-width: 1024px) {
   .app {
-    overflow-x: hidden;
+    // `clip` prevents horizontal scroll without creating a scroll container,
+    // so descendant `position: sticky` (e.g. the Selected Works carousel) keeps working.
+    overflow-x: clip;
   }
 
   .sticky-cursor-circle {
